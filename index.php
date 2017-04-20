@@ -1,12 +1,12 @@
 <!--  
-* DUBIER PEREZ 
+* dubier perez
 */
  -->
-<!DOCTYPE html>
+
 <html lang="ES" ng-app="acumuladorApp">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <head>
-	<title></title>
+	<title>mi veterinaria</title>
 	<script src="js/angular.min.js"></script>
 	<script src="js/mi_js.js"></script>
 	
@@ -46,7 +46,7 @@
 			</div><br>	
 			<div class="col-xs-12 col-md-8 col-lg-8 ">	
 			<div ng-repeat="x in campos">
-			<img src="img/" class="img-responsive" alt="">
+			
            
 		 	
             <table class="table table-inverse table-bordered">
