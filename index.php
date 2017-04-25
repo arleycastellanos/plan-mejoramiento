@@ -1,5 +1,5 @@
 <!--  
-* dubier perez
+* dubier perez/jeison salgado 
 */
  -->
 
@@ -12,14 +12,9 @@
 	
 	
 	<meta charset="utf-8">
- 
-
-	<?php
-		include ('class/BD.php'); //trae las funciones de la pagina BD.php
+ 	<?php
+		include ('BD.php'); //trae las funciones de la pagina BD.php
 		$nb_m=new BD();	// llama la clase BD
-		
-	
-     
 		
 		echo $nb_m->estilos("bootstrap"); //trae la función estilos de bootstrap de la clase
 		
@@ -38,7 +33,7 @@
               	?>
 				<center>
 				<?php 	
-					echo $nb_m->traer_informacion("sintoma","tb_sintomas","id_sintomas","sintoma","get","ver.php"); // trae la información a mostrar.
+					echo $nb_m->bring_information("sintoma","tb_sintomas","id_sintomas","sintoma","get","ver.php"); // trae la información a mostrar.
 				?>
                 </center>
 
