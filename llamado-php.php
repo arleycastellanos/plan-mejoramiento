@@ -2,23 +2,29 @@
 
 
 
-    include'class/BD.php';
+    include ('BD.php');
     $nb_m=new BD();    // llama la clase BD
            
-     if( isset( $_GET[ 'cadena' ] ) )
+    //$nb_m->probando();
+
+
+    if( isset( $_GET[ 'chain' ] ) )
     {     
-        $valores=$_GET['cadena'];
-        echo  $nb_m->consultar($valores);
+        $values=$_GET['chain'];
+        //echo  $nb_m->consultar($values);
         //echo $sql;
+       echo  $nb_m->consulta($values);
+   
 
     }
      if( isset( $_GET[ 'busqueda' ] ) )//Recibe todo loq ue contiene busqueda y hace una busqueda en la base de datos mediante la función
     {  
-        if ($_GET['busqueda']!="buscar.php") 
+        if ($_GET['busqueda']!="") 
         {
-           $valores=$_GET['busqueda'];
-           echo  $nb_m->buscar($valores);//Se trae la función buscar que se encuentra en el BD.php
+           $values=$_GET['busqueda'];
+           echo  $nb_m->buscar($values);//Se trae la función buscar que se encuentra en el BD.php
            echo $sql;
+           echo $values;
         }
         
     }
