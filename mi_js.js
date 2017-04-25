@@ -17,39 +17,40 @@ var acumuladorApp = angular.module( 'acumuladorApp', [] );
 					                      
                     {          
 		                    
-		            		
+		            		console.log( '' );
 		            		
 		            		//console.log($scope.lista.length);
 		            		
 		            		var lista=document.getElementById('sintomas');
 		            		//console.log("esta es la seleccion  "+ lista);  		            		
 		            		//&console.log("esta es la cantidad de sintomas seleccones  " +lista.length); 
-		            		var salida="";
-		            		var cadena="";
+		            		var exit="";
+		            		var chain="";
 
 		            		for (var i = 0; i < lista.length; i++)
 		            		 {	
 			            		   if (lista.item(i).selected) 
 			            		   {
-				            		   	if (salida!="") 
+				            		   	if (exit!="") 
 				            		   	{
-				            		   		salida+=","+lista.item(i).value;
+				            		   		exit+=","+lista.item(i).value;
 				            		   		
 
 				            		   	}else{
 				            		   		
-				            		   		salida+=lista.item(i).value;
+				            		   		exit+=lista.item(i).value;
 				            		   	}
 				            		  
 
 			            		   }                 	
 		            		 } 
-		            		 console.log(salida);
-		            		cadena=salida;
-		            		if(cadena.length>0)
+		            		console.log(' ' + exit);
+		            		chain=exit;
+
+		            		if(chain.length>0)
 		            		{
-		            			console.log(salida);
-		            			$http.get('llamado-php.php?cadena=' + cadena)
+		            			console.log(exit);
+		            			$http.get('llamado-php.php?chain=' + chain)
     							.then(
     								function (response) 
     									{
@@ -57,7 +58,7 @@ var acumuladorApp = angular.module( 'acumuladorApp', [] );
     									}
 									);
 		            			 
-		                            console.log("valor que deberia llegar al php  "   + cadena);  
+		                            console.log("valor que deberia llegar al php  "   + chain);  
 		            		}             
                     }
                     $scope.buscar = function(b)
