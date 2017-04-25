@@ -1,9 +1,9 @@
 <!--
-*BUBIER PEREZ
+*dubier perez/jeison salgado
 -->
 <?php 
 
-$valores            = "";
+$values            = "";
 $caracter_separador = ",";
 $total_campos=$_GET['contador'];
 echo $total_campos."<br>";
@@ -12,33 +12,33 @@ for( $i = 0; $i <= $total_campos; $i ++ )
         {
               if (isset($_GET['sintoma'.$i]))
                {
-                  if ($valore!="") 
+                  if ($value!="") 
                    {
-                     $valores+=",".$_GET['sintoma'.$i];
+                     $value+=",".$_GET['sintoma'.$i];
                    }else{
-                         $valore+=$_GET['sintoma'];
+                         $value+=$_GET['sintoma'];
                         }   
       	       }
    			}
         
-        echo $valores;
-       include 'class/BD.php';
+        echo $values;
+       include ('BD.php');
     $nuevo_obj=new BD();
-      echo $nuevo_obj->leer_campo( $nuevo_obj->consultar($valores),"<th>Id_enfermedad</th> <th>Enfermedad</th><th>Id_sintoma</th><th>Sintoma</th><th>Id_Informe</th><th>Id_enfermedad</th><th>Id_Sintoma</th>");
-      echo $nuevo_obj->estilos("bootstrap"); //trae la función estilos de bootstrap de la clase
+      echo $nuevo_obj->leer_campo( $nuevo_obj->consultar($values),"<th>Id_enfermedad</th> <th>Enfermedad</th><th>Id_sintoma</th><th>Sintoma</th><th>Id_Informe</th><th>Id_enfermedad</th><th>Id_Sintoma</th>");
+      echo $nuevo_obj->Styles("bootstrap"); //trae la función estilos de bootstrap de la clase
 
 ?>
 
 
 <?php
 
-    include'class/BD.php';
+    include('BD.php');
     $nuevo_obj=new BD();    // llama la clase BD
            
-     if( isset( $_GET[ 'cadena' ] ) )
+     if( isset( $_GET[ 'chain' ] ) )
     {     
-        $valores=$_GET['cadena'];
-        echo  $nuevo_obj->consultar($valores);
+        $values=$_GET['chain'];
+        echo  $nuevo_obj->consultar($values);
         //echo $sql;
     }
   ?>
